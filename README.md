@@ -12,6 +12,7 @@ Features:
 -holding an item like a torch emmits light around the player
 -shadows and fog
 -colored lighting
+-red light around player if hurt (can be deactivated)
 
 Configurable Settings:
 
@@ -24,3 +25,5 @@ Configurable Settings:
 -blacknwhite = if true, the world is black and white
 
 -graytorchlight = if true, items like torches emmit a gray light, else, they give of a orange light
+
+-redRadiusIfHurt = if true, red light appears around the player if hurt
