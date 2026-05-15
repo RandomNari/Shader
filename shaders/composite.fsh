@@ -1,9 +1,10 @@
 #version 330 compatibility
 #include "/lib/shadowDistort.glsl"
-#define coloredGlassShadows
-#define blacknwhite
-#define inverted
-#define graytorchlight
+#define coloredGlassShadows true
+#define blacknwhite true
+#define inverted false
+#define graytorchlight true
+#define redRadiusIfHurt false
 
 uniform sampler2D colortex0;
 uniform sampler2D colortex1;
@@ -14,6 +15,7 @@ uniform sampler2D shadowtex1;
 uniform sampler2D shadowcolor0;
 uniform int heldBlockLightValue;
 uniform int heldBlockLightValue2;
+uniform int is_hurt;
 
 
 
@@ -140,4 +142,11 @@ void main() {
 
 	color.rgb += torchColor * LightColorRight/5.0; //??
 
+	#ifdef redRadiusIfHurt
+	if (is_hurt != 0)
+	{
+		float damage = smoothstep(5.0, 0.0, length(feetPlayerPos));
+		color.rgb += vec3(1.0,0.0,0.0)  * damage/5.0;
+	}
+	#endif
 }
