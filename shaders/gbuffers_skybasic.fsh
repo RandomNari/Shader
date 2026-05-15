@@ -34,5 +34,6 @@ void main() {
 	} else {
 		vec3 pos = screenToView(vec3(gl_FragCoord.xy / vec2(viewWidth, viewHeight), 1.0));
 		color = vec4(calcSkyColor(normalize(pos)), 1.0);
+		
 	}
 }
