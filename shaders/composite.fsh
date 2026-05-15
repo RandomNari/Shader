@@ -1,10 +1,10 @@
 #version 330 compatibility
 #include "/lib/shadowDistort.glsl"
-#define coloredGlassShadows true
-#define blacknwhite true
-#define inverted false
-#define graytorchlight true
-#define redRadiusIfHurt false
+#define coloredGlassShadows
+#define blacknwhite
+#define inverted
+#define graytorchlight
+#define redRadiusIfHurt
 
 uniform sampler2D colortex0;
 uniform sampler2D colortex1;
