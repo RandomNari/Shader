@@ -138,5 +138,6 @@ void main() {
 	vec3 torchColor = vec3(1.0, 0.6, 0.3);
 	#endif
 
-	color.rgb += torchColor * LightColorRight/5.0;
+	color.rgb += torchColor * LightColorRight/5.0; //??
+
 }
